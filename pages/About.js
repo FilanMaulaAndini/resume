@@ -1,10 +1,9 @@
-import Link from 'next/link'
-import Head from 'next/head'
-
+import Navbar from './Navbar'
 const About = () => {
     return(
-    <>
-        <section class="resume-section" id="about">
+    <div id="main">
+        <Navbar />
+        <section class="resume-section" id="#about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
                         Filan {' '}
@@ -25,7 +24,7 @@ const About = () => {
                 </div>
             </section>
             <hr class="m-0" />
-        </>
+        </div>
     )
 }
 

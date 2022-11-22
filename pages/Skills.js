@@ -1,6 +1,8 @@
+import Navbar from './Navbar'
 const Skills = () => {
     return(
     <>
+    <Navbar />
         <section class="resume-section" id="skills">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Skills</h2>

@@ -1,12 +1,12 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
  
-    
-  
   return (
     <>
+    
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -22,7 +22,9 @@ function MyApp({ Component, pageProps }) {
         
         <link href="css/styles.css" rel="stylesheet" />
     </head>
+  <Layout>
   <Component {...pageProps} />
+  </Layout>
   </>
   )
   }
