@@ -2,15 +2,13 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react'
-import Navbar from './Navbar'
 
 const ToDoList = () => {
 const [todo, setTodo] = useState([]);
 const [input, setInput] = useState("");
     return(
     <>
-    <Navbar />
-        <section class="resume-section" id="todolist">
+        <section class="resume-section">
         <Form>
             {input}
             <Card 
@@ -28,13 +26,18 @@ const [input, setInput] = useState("");
             </Card>
             <Button className="mb-3" variant="primary" type="submit" onClick={() => setTodo([...todo, input])}>
             Submit
-            </Button>
+            </Button><br />
         </Form>
         </section>
         <hr class="m-0" />
     </>
     )
 }
+
+function Contoh(x){
+    return(x);
+}
+
 export default ToDoList
 // const x = 5;
 // let arraycontoh = [3,2,1,4,2,8,0,5,6];

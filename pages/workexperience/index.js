@@ -1,9 +1,6 @@
-import Navbar from './Navbar'
-
 const WorkExperience = () => {
     return(
     <>
-    <Navbar />
    <section class="resume-section" id="workexperience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Work Experience</h2>

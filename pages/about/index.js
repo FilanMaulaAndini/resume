@@ -1,14 +1,19 @@
-import Navbar from './Navbar'
+import Link from 'next/link'
+import Button from 'react-bootstrap/Button';
+import { useState } from 'react'
+
 const About = () => {
+    
+    const [show, setShow] = useState();
     return(
     <div id="main">
-        <Navbar />
         <section class="resume-section" id="#about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
-                        Filan {' '}
+                        {show}{' '}
                         <span class="text-primary">Maula {' '}</span>
-                        Andini
+                        Andini 
+                        
                     </h1>
                     <div class="subheading mb-5">
                         Pasuruan · Indonesia, 67165 · +62822-3180-1321 ·{' '}
@@ -20,12 +25,19 @@ const About = () => {
                         <a class="social-icon" href="https://github.com/FilanMaulaAndini"><i class="fab fa-github"></i></a>
                         <a class="social-icon" href="https://twitter.com/i/flow/login"><i class="fab fa-twitter"></i></a>
                         <a class="social-icon" href="https://id-id.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <Button className="mb-3" variant="primary" type="submit" onClick={() => setShow(<Contoh />)}>
+                            Function
+                        </Button>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
         </div>
     )
+}
+
+function Contoh(){
+    return("Filan");
 }
 
 export default About

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { useState } from 'react'
 import { FaBookmark } from "react-icons/fa";
-
+import Link from 'next/link'
 
 const Navbar = () => {
    const [show, setShow] = useState(1);
@@ -17,11 +17,11 @@ const Navbar = () => {
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a className={show === 1 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(1)}>About</a></li>
-                    <li class="nav-item"><a className={show === 2 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} href="#workexperience" onClick={() => setShow(2)} >Work Experience</a></li>
-                    <li class="nav-item"><a className={show === 3 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} href="#education" onClick={() => setShow(3)}>Education</a></li>
-                    <li class="nav-item"><a className={show === 4 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} href="#skills" onClick={() => setShow(4)}>Skills</a></li>
-                    <li class="nav-item"><a className={show === 5 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} href="#project" onClick={() => setShow(5)}>Project</a></li>
-                    <li class="nav-item"><a className={show === 6 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} href="#todolist" onClick={() => setShow(6)}>To Do List</a></li>
+                    <Link href='/workexperience'><li class="nav-item"><a className={show === 2 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(2)}>Work Experience</a></li></Link>
+                    <li class="nav-item"><a className={show === 3 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(3)}>Education</a></li>
+                    <li class="nav-item"><a className={show === 4 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(4)}>Skills</a></li>
+                    <li class="nav-item"><a className={show === 5 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(5)}>Project</a></li>
+                    <li class="nav-item"><a className={show === 6 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(6)}>To Do List</a></li>
                 </ul>
             </div>
             <div class="social-icons">
