@@ -1,8 +1,18 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Layout from "../components/Layout";
+import Navbar from "../components/navbar";
+import WorkExperience from '../components/workexperience';
+import ToDoList from '../components/todolist';
+import Education from '../components/education';
+import Skills from '../components/skills';
+import Project from '../components/project';
+import About from '../components/about';
+import { useState } from 'react';
 
 function MyApp({ Component, pageProps }) {
+  const [show, setShow] = useState(1);
+
+  const props = {show, setShow, todo, setTodo};
  
   return (
     <>
@@ -21,9 +31,15 @@ function MyApp({ Component, pageProps }) {
         
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-  <Layout>
-  <Component {...pageProps} />
-  </Layout>
+    <Navbar {...props}/>
+    <div id='content'>
+      {show === 1 ?<About />:''}
+      {show === 2 ?<WorkExperience />:''}
+      {show === 3 ?<Education />:''}
+      {show === 4 ?<Skills/>:''}
+      {show === 5 ?<Project />:''}
+      {show === 6 ?<ToDoList />:''}
+    </div>
   </>
   )
   }
