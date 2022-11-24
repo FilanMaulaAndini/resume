@@ -11,7 +11,7 @@ import { useState } from 'react';
 
 function MyApp({ Component, pageProps }) {
   const [show, setShow] = useState(1);
-
+  const [todo, setTodo] = useState([]);
   const props = {show, setShow, todo, setTodo};
  
   return (
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
       {show === 3 ?<Education />:''}
       {show === 4 ?<Skills/>:''}
       {show === 5 ?<Project />:''}
-      {show === 6 ?<ToDoList />:''}
+      {show === 6 ?<ToDoList {...props}/>:''}
     </div>
   </>
   )

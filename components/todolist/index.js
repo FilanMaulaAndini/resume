@@ -3,8 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react'
 
-const ToDoList = () => {
-    const [todo, setTodo] = useState([]);
+const ToDoList = (props) => {
+    const {todo,setTodo} = props;
     const [input, setInput] = useState("");
     const handleSubmit = () => {
         setTodo([...todo, input])
