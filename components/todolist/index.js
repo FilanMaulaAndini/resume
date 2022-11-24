@@ -3,9 +3,12 @@ import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react'
 
-const ToDoList = () => {
-const [todo, setTodo] = useState([]);
-const [input, setInput] = useState("");
+const ToDoList = (props) => {
+    const {todo,setTodo} = props;
+    const [input, setInput] = useState("");
+    const handleSubmit = () => {
+        setTodo([...todo, input])
+    }
     return(
     <>
         <section class="resume-section">
@@ -24,7 +27,7 @@ const [input, setInput] = useState("");
             </Card.Body>
              <input type="text" onChange={(e) => setInput(e.target.value)}></input>
             </Card>
-            <Button className="mb-3" variant="primary" type="submit" onClick={() => setTodo([...todo, input])}>
+            <Button className="mb-3" variant="primary" onClick={() => handleSubmit()}>
             Submit
             </Button><br />
         </Form>

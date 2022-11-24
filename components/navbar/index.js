@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { FaBookmark } from "react-icons/fa";
 import Link from 'next/link'
 
-const Navbar = () => {
-   const [show, setShow] = useState(1);
+const Navbar = (props) => {
+    const {show,setShow} = props;
     return(
     <div>  
     <body id="page-top">
@@ -17,7 +17,7 @@ const Navbar = () => {
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a className={show === 1 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(1)}>About</a></li>
-                    <Link href='/workexperience'><li class="nav-item"><a className={show === 2 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(2)}>Work Experience</a></li></Link>
+                    <li class="nav-item"><a className={show === 2 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(2)}>Work Experience</a></li>
                     <li class="nav-item"><a className={show === 3 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(3)}>Education</a></li>
                     <li class="nav-item"><a className={show === 4 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(4)}>Skills</a></li>
                     <li class="nav-item"><a className={show === 5 ? "nav-link js-scroll-trigger nav-underline" : "nav-link js-scroll-trigger"} onClick={() => setShow(5)}>Project</a></li>
@@ -43,4 +43,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
